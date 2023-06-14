@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --darkTurquoise: #4DB4B1;
+    --lightTurquoise: #51BEBD;
+    --lime-green: hsl(71, 73%, 54%);
+    --background: hsl(204, 43%, 93%);
+    --light-grey: hsl(218, 22%, 67%);
+    --white: #FFFFFF;
+    --common-padding:2.5em;
+    --common-margin:1.2em;
+    --border-rad:0.4rem;
+    font-size:18px;
+}
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+p, li {
+    line-height: 1.6rem;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+.pricegrid-container {
+    width:60%;
+    max-height: 80%;
+    border-radius: var(--border-rad);
+    box-shadow: 0 1em 0.3em 0.3em #E4E4E4;
+}
+.headline {
+    padding: var(--common-padding);
+    background-color: var(--white);
+    border-top-left-radius: var(--border-rad);
+    border-top-right-radius: var(--border-rad);
+}
+.headline > h1 {
+    margin-bottom: var(--common-margin);
+    color:var(--darkTurquoise);
+}
+.headline > h2 {
+    margin-bottom: var(--common-margin);
+    color:var(--lime-green);
+}
+.headline > p {
+    color: var(--light-grey);
+}
+.bottom {
+    display: flex;
+}
+.bottom * {
+    color:var(--white);
+}
+.bottom > * {
+    padding: var(--common-padding);
+}
+.subscription {
+    flex: 1;
+    background-color: var(--darkTurquoise);
+    border-bottom-left-radius: var(--border-rad);
+}
+.subscription > h2,
+.subscription > div {
+    margin-bottom: 1.5rem;
+}
+.subscription .fee {
+    font-size: 2.5rem;
+}
+.subscription > div:nth-child(2) > span:nth-child(2) {
+    opacity: 0.7;
+}
+.subscription button {
+    display: block;
+    font-size: 1.2rem;
+    border:none;
+    padding: 1em;
+    background-color: var(--lime-green);
+    cursor: pointer;
+    font-weight:800;
+    width:100%;
+    margin:0 auto;
+    border-radius: var(--border-rad);
+    box-shadow: 0px 5px 9px 2px #357d7a;
+}
+.description {
+    flex:1;
+    background-color: var(--lightTurquoise);
+    border-bottom-right-radius: var(--border-rad);
+}
+.description > h2 {
+    margin-bottom: 1.5rem;
+}
+.description > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+@media screen and (max-width: 660px) {
+    .bottom {
+        flex-direction: column;
+    }
+    .pricegrid-container {
+        width:100%;
+        max-height: 100%;
+    }
+}
